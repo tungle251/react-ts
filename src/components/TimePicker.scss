@@ -1,26 +1,11 @@
-.rc-picker {
-  &-focused {
-    border: none;
+.rc-time-picker {
+  &-clear {
+    right: 37px;
+    top: 0;
   }
 
-  &-has-error {
-    border: 1px solid red;
-  }
-
-  &-dropdown {
-    box-shadow: none;
-    .rc-picker-panel {
-      background: #fff;
-
-      .rc-picker-time-panel-cell {
-        &-selected {
-          background: aqua;
-        }
-      }
-
-      .rc-picker-ranges > li {
-        display: inline-grid;
-      }
-    }
+  .icon {
+    position: absolute;
+    right: 8px;
   }
 }

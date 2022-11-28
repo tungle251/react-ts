@@ -1,22 +1,19 @@
 import "./App.css";
 import TimePicker from "./components/TimePicker";
+import moment from "moment";
 
 function App() {
   return (
     <div className="App">
       <TimePicker
-        className="time-picker"
-        disabledTime={(now) => ({
-          disabledHours: () => [now.hours()],
-          disabledMinutes: () => [now.minutes()],
-        })}
-        onChange={(value, dateString) => {
-          console.log({ value, dateString });
+        defaultValue={moment()}
+        onChange={(value) => {
+          console.log({ value });
         }}
-        allowClear
         format="HH:mm"
         showSecond={false}
         placeholder="HH:mm"
+        allowEmpty
       />
     </div>
   );
