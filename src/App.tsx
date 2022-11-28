@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TimePicker from "./components/TimePicker";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TimePicker
+        className="time-picker"
+        disabledTime={(now) => ({
+          disabledHours: () => [now.hours()],
+          disabledMinutes: () => [now.minutes()],
+        })}
+        onChange={(value, dateString) => {
+          console.log({ value, dateString });
+        }}
+        allowClear
+        format="HH:mm"
+        showSecond={false}
+        placeholder="HH:mm"
+      />
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.rc-picker {
+  &-focused {
+    border: none;
+  }
+
+  &-has-error {
+    border: 1px solid red;
+  }
+
+  &-dropdown {
+    box-shadow: none;
+    .rc-picker-panel {
+      background: #fff;
+
+      .rc-picker-time-panel-cell {
+        &-selected {
+          background: aqua;
+        }
+      }
+
+      .rc-picker-ranges > li {
+        display: inline-grid;
+      }
+    }
+  }
+}
