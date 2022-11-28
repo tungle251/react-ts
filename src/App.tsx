@@ -10,10 +10,11 @@ function App() {
         onChange={(value) => {
           console.log({ value });
         }}
-        format="HH:mm"
+        format="h:mm a"
         showSecond={false}
-        placeholder="HH:mm"
+        placeholder="h:mm a"
         allowEmpty
+        use12Hours
       />
     </div>
   );
